@@ -44,7 +44,7 @@ namespace SeleniumWebDriver
         {
             return table.Where(x => x.Text == whereClouse).Count();
         }
-        public void Sahininden()
+        public void Sahibinden()
         {
             driver.Url = "https://secure.sahibinden.com/giris";
             driver.FindElement(By.Id("username")).SendKeys("aliihsanakay");
