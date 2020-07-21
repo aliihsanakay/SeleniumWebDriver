@@ -27,8 +27,8 @@ namespace SeleniumWebDriver
             
             var element = driver.FindElement(By.Id("liOgrenci"));
             element.FindElement(By.TagName("a")).Click();
-            driver.FindElement(By.Id("txtAccount")).SendKeys("12325613216");
-            driver.FindElement(By.Id("txtPassword")).SendKeys("78244818");
+            driver.FindElement(By.Id("txtAccount")).SendKeys("tc no");
+            driver.FindElement(By.Id("txtPassword")).SendKeys("şifre");
             driver.FindElement(By.Id("doButton")).Click();
             driver.Url = "https://aof.anadolu.edu.tr/ogrenci/DersDurum.aspx";
             var table = driver.FindElements(By.ClassName("DTableSutun")).Where(x=>x.GetAttribute("id").Contains("pnlAciklama"));
