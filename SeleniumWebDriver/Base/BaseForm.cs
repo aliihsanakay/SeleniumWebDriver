@@ -15,7 +15,8 @@ namespace SeleniumWebDriver.Base
         
         public BaseForm()
         {
-            var relativePath = @"C:\Users\ALI\source\repos\EdgeDriverTest\EdgeDriverTest\bin\Debug\netcoreapp2.1";
+            //var relativePath = @"C:\Users\ALI\source\repos\EdgeDriverTest\EdgeDriverTest\bin\Debug\netcoreapp2.1";
+            var relativePath = Application.StartupPath;
             var options = new ChromeOptions();
             options.AddArgument("--start-maximized");//full screen ekran açar
             driver = new ChromeDriver(relativePath, options);
