@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -27,8 +28,10 @@ namespace SeleniumWebDriver
             
             var element = driver.FindElement(By.Id("liOgrenci"));
             element.FindElement(By.TagName("a")).Click();
-            driver.FindElement(By.Id("txtAccount")).SendKeys("tc no");
-            driver.FindElement(By.Id("txtPassword")).SendKeys("şifre");
+            driver.FindElement(By.ClassName("register-btn")).Click();
+         
+            driver.FindElement(By.Id("txtAccount")).SendKeys("Tc");
+            driver.FindElement(By.Id("txtPassword")).SendKeys("Pass");
             driver.FindElement(By.Id("doButton")).Click();
             driver.Url = "https://aof.anadolu.edu.tr/ogrenci/DersDurum.aspx";
             var table = driver.FindElements(By.ClassName("DTableSutun")).Where(x=>x.GetAttribute("id").Contains("pnlAciklama"));
